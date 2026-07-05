@@ -8,6 +8,7 @@ from browser import window
 _config = None
 
 DEFAULTS = {
+    'id': 'course',
     'name': 'CWC Workshop',
     'logo': '🎓',
     'tagline': 'Curso interactivo',

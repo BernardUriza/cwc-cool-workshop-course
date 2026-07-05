@@ -68,6 +68,9 @@ class AppState:
     ]
 
     def __init__(self):
+        from .config import get_config
+        course_id = get_config().get('id', 'course')
+        self.STORAGE_KEY = f'cwc_state::{course_id}'
         self._state = self._get_default_state()
         self._listeners = []
         self._badge_listeners = []

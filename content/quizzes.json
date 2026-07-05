@@ -1,0 +1,56 @@
+{
+  "bienvenida": [
+    {
+      "question": "¿Dónde vive el contenido editable de un curso hecho con este template?",
+      "options": [
+        "En engine/",
+        "En content/",
+        "En index.html",
+        "En localStorage"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "¿Cuál es la anatomía de lección que el template trae de fábrica?",
+      "options": [
+        "título → cuerpo → examen",
+        "questions → objectives → cuerpo → keypoints",
+        "video → lectura → tarea",
+        "intro → desarrollo → conclusión"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Si \\(P(A)=0.3\\) y \\(P(B)=0.4\\) con A y B disjuntos, ¿cuánto vale \\(P(A \\cup B)\\)?",
+      "options": [
+        "0.12",
+        "0.7",
+        "0.1",
+        "No se puede saber"
+      ],
+      "answer": 1
+    }
+  ],
+  "tu-propio-contenido": [
+    {
+      "question": "Para agregar una lección nueva hay que…",
+      "options": [
+        "Solo crear el archivo JSON de la lección",
+        "Crear el JSON y registrarla en content/lessons/index.json",
+        "Editar engine/lessons/loader.py",
+        "Recompilar el bundle de Brython"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "¿Qué tipos de sección soporta el renderer de lecciones?",
+      "options": [
+        "Solo text",
+        "text, tip, warning, example y code",
+        "Cualquier HTML crudo",
+        "Markdown completo con tablas"
+      ],
+      "answer": 1
+    }
+  ]
+}

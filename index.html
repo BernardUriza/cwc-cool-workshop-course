@@ -29,14 +29,17 @@
     <script>
         window.renderMath = function(elementId) {
             const el = document.getElementById(elementId || 'app');
-            if (el && window.renderMathInElement) {
-                renderMathInElement(el, {
-                    delimiters: [
-                        {left: '$$', right: '$$', display: true},
-                        {left: '\\(', right: '\\)', display: false}
-                    ]
-                });
+            if (!el) return;
+            if (!window.renderMathInElement) {
+                setTimeout(() => window.renderMath(elementId), 300);
+                return;
             }
+            renderMathInElement(el, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '\\(', right: '\\)', display: false}
+                ]
+            });
         };
     </script>
 

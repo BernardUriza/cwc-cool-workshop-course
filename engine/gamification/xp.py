@@ -76,12 +76,14 @@ class XPManager:
         details['total'] = total
         details['multiplier'] = total_multiplier
 
-        # Añadir al estado
-        old_xp = self.state.data.get('xp', 0)
+        # Añadir al estado (la fuente de verdad es progress.xp / progress.level)
+        progress = self.state.data.setdefault('progress', {})
+        old_xp = progress.get('xp', 0)
         new_xp = old_xp + total
         old_level = self.state.get_level_info()['level']
 
-        self.state.data['xp'] = new_xp
+        progress['xp'] = new_xp
+        progress['level'] = self._level_for_xp(new_xp)
         self.state.save()
 
         # Verificar level up
@@ -114,8 +116,19 @@ class XPManager:
         modal.show()
 
         # XP bonus por subir de nivel
-        self.state.data['xp'] = self.state.data.get('xp', 0) + self.BASE_XP['level_up']
+        progress = self.state.data.setdefault('progress', {})
+        progress['xp'] = progress.get('xp', 0) + self.BASE_XP['level_up']
+        progress['level'] = self._level_for_xp(progress['xp'])
         self.state.save()
+
+    def _level_for_xp(self, xp):
+        """Nivel que corresponde a un total de XP según los umbrales del estado."""
+        thresholds = self.state.LEVEL_THRESHOLDS
+        level = 1
+        for i in range(1, len(thresholds)):
+            if xp >= thresholds[i]:
+                level = i + 1
+        return level
 
     def _log_xp_event(self, activity, amount, details):
         """Registra evento de XP en el historial."""

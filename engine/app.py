@@ -55,6 +55,8 @@ class App:
             nav_items.append(('lessons', 'Lecciones', '📚'))
         if feature_enabled('practice'):
             nav_items.append(('practice', 'Práctica', '✍️'))
+        if feature_enabled('retrieval'):
+            nav_items.append(('quiz', 'Repaso', '🧠'))
         if feature_enabled('puzzles'):
             nav_items.append(('puzzles', 'Puzzles', '🧩'))
         if feature_enabled('playground'):
@@ -165,7 +167,8 @@ class App:
             assessment_page,
             practice_page,
             practice_exercise_page,
-            final_project_page
+            final_project_page,
+            quiz_page
         )
 
         router = self.router
@@ -184,6 +187,7 @@ class App:
         router.register('practice', practice_page, {'title': 'Práctica'})
         router.register('practice/:id', practice_exercise_page, {'title': 'Ejercicio de Práctica'})
         router.register('final-project', final_project_page, {'title': 'Proyecto Final'})
+        router.register('quiz', quiz_page, {'title': 'Quiz de Repaso'})
 
         # Hook para actualizar navbar después de navegación
         def update_navbar_stats(context):

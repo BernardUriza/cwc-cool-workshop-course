@@ -156,7 +156,8 @@ class Router:
 
             # Actualizar título si está definido
             if 'title' in route_info['meta']:
-                document.title = f"PromptCraft - {route_info['meta']['title']}"
+                from .config import get_config
+                document.title = f"{get_config()['name']} - {route_info['meta']['title']}"
 
             try:
                 content = route_info['handler'](params)

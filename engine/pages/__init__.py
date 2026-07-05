@@ -11,6 +11,7 @@ from .badges import badges_page
 from .assessment import assessment_page
 from .practice import practice_page, practice_exercise_page
 from .final_project import final_project_page
+from .quiz import quiz_page
 
 __all__ = [
     'home_page',
@@ -25,4 +26,5 @@ __all__ = [
     'practice_page',
     'practice_exercise_page',
     'final_project_page',
+    'quiz_page',
 ]

@@ -30,6 +30,9 @@ class LessonRenderer:
         header = self._render_header()
         container <= header
 
+        # Preguntas guía (anatomía Carpentries: antes de leer)
+        container <= self._render_questions()
+
         # Objetivos
         objectives = self._render_objectives()
         container <= objectives
@@ -44,7 +47,52 @@ class LessonRenderer:
             exercise = self._render_exercise()
             container <= exercise
 
+        # Keypoints (anatomía Carpentries: takeaways al cierre)
+        container <= self._render_keypoints()
+
         return container
+
+    def _render_questions(self):
+        """Preguntas guía que el estudiante debe poder responder al terminar."""
+        questions = self.lesson.get('questions', [])
+        if not questions:
+            return html.DIV()
+
+        section = html.DIV(Class="bg-amber-50 rounded-xl p-6 border border-amber-100")
+        section <= html.H3(
+            "❓ Antes de empezar, ten estas preguntas en mente",
+            Class="font-semibold text-amber-800 mb-3"
+        )
+        q_list = html.UL(Class="space-y-2")
+        for q in questions:
+            q_list <= html.LI(
+                html.SPAN("• ", Class="text-amber-500 font-bold") +
+                html.SPAN(q, Class="text-amber-700"),
+                Class="flex items-start"
+            )
+        section <= q_list
+        return section
+
+    def _render_keypoints(self):
+        """Takeaways de cierre de la lección."""
+        keypoints = self.lesson.get('keypoints', [])
+        if not keypoints:
+            return html.DIV()
+
+        section = html.DIV(Class="bg-green-50 rounded-xl p-6 border border-green-100")
+        section <= html.H3(
+            "🔑 Puntos clave",
+            Class="font-semibold text-green-800 mb-3"
+        )
+        kp_list = html.UL(Class="space-y-2")
+        for kp in keypoints:
+            kp_list <= html.LI(
+                html.SPAN("✓ ", Class="text-green-500 font-bold") +
+                html.SPAN(kp, Class="text-green-700"),
+                Class="flex items-start"
+            )
+        section <= kp_list
+        return section
 
     def _render_header(self):
         """Renderiza el header de la lección."""
