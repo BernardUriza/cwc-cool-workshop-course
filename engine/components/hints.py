@@ -140,6 +140,8 @@ class ClueList(Component):
         clue_list = html.UL(Class="space-y-2")
 
         for idx, clue in enumerate(clues):
+            if isinstance(clue, dict):
+                clue = clue.get('text', '')
             is_checked = idx in self.checked_clues
 
             clue_item = html.LI(

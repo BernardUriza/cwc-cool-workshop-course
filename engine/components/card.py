@@ -217,6 +217,9 @@ class PuzzleCard(Component):
         title = puzzle.get('title', 'Puzzle')
         description = puzzle.get('description', '')
         difficulty = puzzle.get('difficulty', 1)
+        if isinstance(difficulty, str):
+            from ..puzzles.loader import DIFFICULTY_LEVELS
+            difficulty = DIFFICULTY_LEVELS.get(difficulty, 3)
         xp_reward = puzzle.get('xp_reward', 50)
         solved = puzzle.get('solved', False)
         best_time = puzzle.get('best_time')

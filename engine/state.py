@@ -167,11 +167,16 @@ class AppState:
         return deep_merge(defaults, loaded)
 
     def save(self):
-        """Guardar estado en localStorage"""
+        """Guardar estado en localStorage y notificar listeners"""
         try:
             storage[self.STORAGE_KEY] = json.dumps(self._state)
         except Exception as e:
             console.log(f"[State] Error saving: {e}")
+        for listener in self._listeners:
+            try:
+                listener(self._state)
+            except Exception as e:
+                console.log(f"[State] Listener error: {e}")
 
     def get(self, key, default=None):
         """

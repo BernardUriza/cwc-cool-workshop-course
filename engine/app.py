@@ -173,21 +173,27 @@ class App:
 
         router = self.router
 
-        # Registrar rutas principales
         router.register('home', home_page, {'title': 'Inicio'})
-        router.register('lessons', lessons_page, {'title': 'Lecciones'})
-        router.register('lesson/:id', lesson_detail_page, {'title': 'Lección'})
-        router.register('puzzles', puzzles_page, {'title': 'Puzzles'})
-        router.register('puzzle/:id', puzzle_page, {'title': 'Puzzle'})
-        router.register('playground', playground_page, {'title': 'Playground'})
         router.register('profile', profile_page, {'title': 'Mi Perfil'})
         router.register('badges', badges_page, {'title': 'Badges'})
 
-        router.register('assessment', assessment_page, {'title': 'Evaluación Diagnóstica'})
-        router.register('practice', practice_page, {'title': 'Práctica'})
-        router.register('practice/:id', practice_exercise_page, {'title': 'Ejercicio de Práctica'})
-        router.register('final-project', final_project_page, {'title': 'Proyecto Final'})
-        router.register('quiz', quiz_page, {'title': 'Quiz de Repaso'})
+        if feature_enabled('lessons'):
+            router.register('lessons', lessons_page, {'title': 'Lecciones'})
+            router.register('lesson/:id', lesson_detail_page, {'title': 'Lección'})
+        if feature_enabled('puzzles'):
+            router.register('puzzles', puzzles_page, {'title': 'Puzzles'})
+            router.register('puzzle/:id', puzzle_page, {'title': 'Puzzle'})
+        if feature_enabled('playground'):
+            router.register('playground', playground_page, {'title': 'Playground'})
+        if feature_enabled('assessment'):
+            router.register('assessment', assessment_page, {'title': 'Evaluación Diagnóstica'})
+        if feature_enabled('practice'):
+            router.register('practice', practice_page, {'title': 'Práctica'})
+            router.register('practice/:id', practice_exercise_page, {'title': 'Ejercicio de Práctica'})
+        if feature_enabled('final_project'):
+            router.register('final-project', final_project_page, {'title': 'Proyecto Final'})
+        if feature_enabled('retrieval'):
+            router.register('quiz', quiz_page, {'title': 'Quiz de Repaso'})
 
         # Hook para actualizar navbar después de navegación
         def update_navbar_stats(context):

@@ -31,3 +31,13 @@ el smell que motivó este template — no reintroducirlo.
 - Math inline en JSON: `\\(...\\)`; display: `$$...$$`
 - El sampler de retrieval deduplica por (lesson_id, question) — solo pregunta
   sobre lecciones completadas
+- `difficulty` en content es string (easy/medium/hard); el engine la normaliza a
+  1-5 en `puzzles/loader.normalize_puzzle` — esa es LA frontera, no agregar
+  mapeos ad-hoc en componentes
+
+## Deuda conocida
+
+- `get_all_lessons()` hace N XHRs síncronos secuenciales (uno por lección). Con
+  ~30+ lecciones el home/lecciones se sentirá lento en Pages; la cura es un
+  build step que agregue `content/lessons/all.json` o migrar el loader a
+  async+callback como el de puzzles.

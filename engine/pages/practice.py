@@ -14,8 +14,8 @@ def practice_page(params):
 
     # Header
     header = html.DIV(Class="mb-8")
-    header <= html.H1("✍️ Práctica de Prompts", Class="text-3xl font-bold text-gray-800 mb-2")
-    header <= html.P("Escribe prompts reales y recibe feedback instantáneo",
+    header <= html.H1("✍️ Práctica", Class="text-3xl font-bold text-gray-800 mb-2")
+    header <= html.P("Ejercicios con feedback instantáneo",
                      Class="text-gray-600")
     container <= header
 

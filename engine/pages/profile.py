@@ -72,7 +72,7 @@ def _render_profile_header(state):
 
     # Info
     info = html.DIV()
-    username = state.data.get('username', 'Prompter')
+    username = state.data.get('user', {}).get('username', 'estudiante')
     info <= html.H1(username, Class="text-3xl font-bold")
     info <= html.P(
         f"Nivel {level_info['level']} - {level_info['title']}",
@@ -82,7 +82,7 @@ def _render_profile_header(state):
     # Stats rápidos
     quick_stats = html.DIV(Class="flex gap-6 mt-4")
     quick_stats <= html.DIV(
-        html.SPAN(f"{state.data.get('xp', 0)}", Class="font-bold text-xl") +
+        html.SPAN(f"{state.data.get('progress', {}).get('xp', 0)}", Class="font-bold text-xl") +
         html.SPAN(" XP", Class="text-indigo-200")
     )
     quick_stats <= html.DIV(

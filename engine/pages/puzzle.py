@@ -5,9 +5,10 @@ from browser import document, html
 from ..state import get_state
 from ..router import navigate
 from ..puzzles.logic_puzzle import LogicPuzzle
-from ..puzzles.loader import get_embedded_puzzle, load_puzzle
+from ..puzzles.loader import get_embedded_puzzle, normalize_puzzle
 from ..gamification.achievements import check_achievements
 from ..gamification.xp import award_xp
+from ..config import http_get_json
 
 
 def puzzle_page(params):
@@ -34,15 +35,16 @@ def puzzle_page(params):
     )
     container <= breadcrumb
 
-    # Obtener datos del puzzle
-    puzzle_data = get_embedded_puzzle(puzzle_id)
+    # Obtener datos del puzzle: content/ es la fuente de verdad, embebido es fallback
+    puzzle_data = normalize_puzzle(http_get_json('content/puzzles/' + puzzle_id + '.json') or get_embedded_puzzle(puzzle_id))
 
     if not puzzle_data:
         container <= _render_not_found(puzzle_id)
         return container
 
     # Verificar si ya está completado
-    completed = state.data.get('puzzles_completed', {}).get(puzzle_id, {})
+    from .puzzles import solved_puzzles
+    completed = solved_puzzles(state).get(puzzle_id, {})
     if completed.get('solved'):
         container <= _render_completed_banner(completed)
 
@@ -114,13 +116,12 @@ def _render_completed_banner(completed):
 
 def _on_puzzle_complete(puzzle_id, result, state):
     """Callback cuando se completa un puzzle."""
-    # Guardar resultado
-    if 'puzzles_completed' not in state.data:
-        state.data['puzzles_completed'] = {}
+    # Guardar resultado (fuente de verdad: progress.puzzles_solved)
+    progress = state.data.setdefault('progress', {})
+    solved = progress.setdefault('puzzles_solved', {})
 
-    existing = state.data['puzzles_completed'].get(puzzle_id, {})
+    existing = solved.get(puzzle_id, {})
 
-    # Actualizar mejor resultado
     if not existing.get('best_time') or result['time'] < existing.get('best_time', 999999):
         existing['best_time'] = result['time']
 
@@ -130,7 +131,7 @@ def _on_puzzle_complete(puzzle_id, result, state):
     existing['solved'] = True
     existing['attempts'] = existing.get('attempts', 0) + 1
 
-    state.data['puzzles_completed'][puzzle_id] = existing
+    solved[puzzle_id] = existing
     state.save()
 
     # Otorgar XP

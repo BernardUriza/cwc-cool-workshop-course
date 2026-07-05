@@ -4,6 +4,16 @@
 from browser import ajax, window
 import json
 
+DIFFICULTY_LEVELS = {'easy': 1, 'medium': 3, 'hard': 5}
+
+
+def normalize_puzzle(data):
+    """El content usa difficulty como string; el engine la consume como 1-5."""
+    if data and isinstance(data.get('difficulty'), str):
+        data['difficulty'] = DIFFICULTY_LEVELS.get(data['difficulty'], 3)
+    return data
+
+
 # Cache de puzzles cargados
 _puzzle_cache = {}
 

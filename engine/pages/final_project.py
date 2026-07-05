@@ -81,8 +81,7 @@ def final_project_page(params):
 
         links = [
             ('#lessons', '📖 Lecciones', 'Aprende los conceptos'),
-            ('#practice', '✍️ Práctica', 'Escribe tus propios prompts'),
-            ('#claude-exercises', '🤖 Ejercicios Claude', 'Practica con Claude Code')
+            ('#practice', '✍️ Práctica', 'Ejercita lo aprendido'),
         ]
 
         for href, title, desc in links:
@@ -233,31 +232,32 @@ def final_project_page(params):
 
 
 def _calculate_course_progress(state):
-    """Calcula el progreso total del curso."""
-    lessons_completed = len(state.data.get('progress', {}).get('lessons_completed', []))
-    puzzles_solved = state.data.get('progress', {}).get('puzzles_solved', 0)
-    practice_done = len(state.data.get('practice', {}).get('completed_exercises', []))
-    claude_exercises = len(state.data.get('claude_exercises', {}).get('completed', []))
+    """Calcula el progreso total del curso con los totales reales del contenido."""
+    from ..config import http_get_json
+    from ..lessons.loader import get_loader
+    from .puzzles import solved_puzzles
 
-    # Pesos (simplificado)
-    total_lessons = 17  # Aproximado
-    total_puzzles = 12
-    total_practice = 8
-    total_claude = 10
+    progress_data = state.data.get('progress', {})
+    lessons_completed = len(progress_data.get('lessons_completed', []))
+    puzzles_solved = len(solved_puzzles(state))
+    practice_done = len(state.data.get('practice', {}).get('completed_exercises', []))
+
+    total_lessons = max(get_loader().get_lesson_count(), 1)
+    puzzle_index = http_get_json('content/puzzles/index.json') or {}
+    total_puzzles = max(len(puzzle_index.get('puzzles', [])), 1)
+    total_practice = max(len(http_get_json('content/practice.json') or []), 1)
 
     weighted_progress = (
-        (lessons_completed / total_lessons * 30) +
-        (puzzles_solved / total_puzzles * 25) +
-        (practice_done / total_practice * 25) +
-        (claude_exercises / total_claude * 20)
+        (min(lessons_completed, total_lessons) / total_lessons * 40) +
+        (min(puzzles_solved, total_puzzles) / total_puzzles * 30) +
+        (min(practice_done, total_practice) / total_practice * 30)
     )
 
     return {
         'percentage': min(100, int(weighted_progress)),
         'lessons': lessons_completed,
         'puzzles': puzzles_solved,
-        'practice': practice_done,
-        'claude': claude_exercises
+        'practice': practice_done
     }
 
 

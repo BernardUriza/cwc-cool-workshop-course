@@ -52,74 +52,98 @@
     {
       "id": "puzzle-prompts-basicos",
       "title": "Tipos de Prompts",
+      "description": "Relaciona cada técnica de prompting con sus características.",
       "category": "fundamentals",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "xp_reward": 30
     },
     {
       "id": "puzzle-errores-comunes",
       "title": "Errores en Prompts",
+      "description": "Identifica qué tipo de error tiene cada prompt problemático.",
       "category": "fundamentals",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "xp_reward": 50
     },
     {
       "id": "puzzle-componentes-prompt",
       "title": "Anatomía del Prompt",
+      "description": "Empareja cada componente con su función en un prompt.",
       "category": "fundamentals",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "xp_reward": 35
     },
     {
       "id": "puzzle-niveles-especificidad",
       "title": "Niveles de Especificidad",
+      "description": "Ordena los prompts según su nivel de especificidad.",
       "category": "techniques",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "xp_reward": 45
     },
     {
       "id": "puzzle-tecnicas-avanzadas",
       "title": "Técnicas Avanzadas",
+      "description": "Relaciona cada técnica avanzada con su caso de uso ideal.",
       "category": "advanced",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "xp_reward": 75
     },
     {
       "id": "puzzle-modelos-llm",
       "title": "Conoce los Modelos",
+      "description": "Relaciona cada modelo con su empresa creadora.",
       "category": "fundamentals",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "xp_reward": 25
     },
     {
       "id": "puzzle-mejores-practicas",
       "title": "Mejores Prácticas",
+      "description": "Identifica si cada práctica es recomendada o no.",
       "category": "techniques",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "xp_reward": 55
     },
     {
       "id": "puzzle-aplicaciones",
       "title": "Aplicaciones de Prompts",
+      "description": "Empareja cada aplicación con la técnica más adecuada.",
       "category": "applications",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "xp_reward": 70
     },
     {
       "id": "puzzle-comandos-claude-code",
       "title": "Comandos de Claude Code",
+      "description": "Relaciona cada tarea con el prompt más efectivo para Claude Code.",
       "category": "claude-code",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "xp_reward": 40
     },
     {
       "id": "puzzle-debugging-claude",
       "title": "Debugging con Claude",
+      "description": "Identifica la mejor estrategia de debugging para cada situación.",
       "category": "claude-code",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "xp_reward": 55
     },
     {
       "id": "puzzle-flujo-trabajo-claude",
       "title": "Flujo de Trabajo con IA",
+      "description": "Ordena los pasos de un flujo de trabajo efectivo con Claude Code.",
       "category": "claude-code",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "xp_reward": 50
     },
     {
       "id": "puzzle-mejores-practicas-claude",
       "title": "Mejores Prácticas Claude Code",
+      "description": "Identifica si cada práctica es recomendada al usar Claude Code.",
       "category": "claude-code",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "xp_reward": 65
     }
   ]
 }
