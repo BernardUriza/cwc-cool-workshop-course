@@ -1,0 +1,77 @@
+{
+  "id": "puzzle-prompts-basicos",
+  "title": "Tipos de Prompts",
+  "description": "Relaciona cada técnica de prompting con sus características.",
+  "difficulty": "easy",
+  "category": "fundamentals",
+  "xp_reward": 30,
+  "time_limit": 300,
+  "grid_size": {
+    "rows": 4,
+    "cols": 4
+  },
+  "categories": [
+    {
+      "name": "Técnicas",
+      "items": [
+        "Zero-Shot",
+        "Few-Shot",
+        "CoT",
+        "Role"
+      ]
+    },
+    {
+      "name": "Característica",
+      "items": [
+        "Sin ejemplos",
+        "Con ejemplos",
+        "Paso a paso",
+        "Personalidad"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "Zero-Shot no requiere ejemplos previos.",
+      "reveals": [
+        [
+          "Zero-Shot",
+          "Sin ejemplos"
+        ]
+      ]
+    },
+    {
+      "text": "Few-Shot utiliza ejemplos para guiar al modelo.",
+      "reveals": [
+        [
+          "Few-Shot",
+          "Con ejemplos"
+        ]
+      ]
+    },
+    {
+      "text": "Chain of Thought descompone el razonamiento.",
+      "reveals": [
+        [
+          "CoT",
+          "Paso a paso"
+        ]
+      ]
+    },
+    {
+      "text": "Role prompting asigna una personalidad o rol.",
+      "reveals": [
+        [
+          "Role",
+          "Personalidad"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Zero-Shot": "Sin ejemplos",
+    "Few-Shot": "Con ejemplos",
+    "CoT": "Paso a paso",
+    "Role": "Personalidad"
+  }
+}

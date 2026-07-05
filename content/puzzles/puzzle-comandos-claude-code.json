@@ -1,0 +1,89 @@
+{
+  "id": "puzzle-comandos-claude-code",
+  "title": "Comandos de Claude Code",
+  "description": "Relaciona cada tarea con el prompt más efectivo para Claude Code.",
+  "difficulty": "easy",
+  "category": "claude-code",
+  "xp_reward": 40,
+  "time_limit": 300,
+  "grid_size": {
+    "rows": 5,
+    "cols": 5
+  },
+  "categories": [
+    {
+      "name": "Tarea",
+      "items": [
+        "Entender código",
+        "Crear archivo",
+        "Buscar bug",
+        "Refactorizar",
+        "Agregar tests"
+      ]
+    },
+    {
+      "name": "Prompt Efectivo",
+      "items": [
+        "Explica qué hace",
+        "Crea un archivo para",
+        "Por qué falla esto",
+        "Mejora legibilidad",
+        "Añade tests unitarios"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "Para entender código existente, pide a Claude que te explique qué hace.",
+      "reveals": [
+        [
+          "Entender código",
+          "Explica qué hace"
+        ]
+      ]
+    },
+    {
+      "text": "Para crear archivos nuevos, especifica el propósito del archivo.",
+      "reveals": [
+        [
+          "Crear archivo",
+          "Crea un archivo para"
+        ]
+      ]
+    },
+    {
+      "text": "Para debugging, describe el comportamiento inesperado preguntando por qué falla.",
+      "reveals": [
+        [
+          "Buscar bug",
+          "Por qué falla esto"
+        ]
+      ]
+    },
+    {
+      "text": "Para refactorizar, enfócate en mejorar la legibilidad del código.",
+      "reveals": [
+        [
+          "Refactorizar",
+          "Mejora legibilidad"
+        ]
+      ]
+    },
+    {
+      "text": "Para testing, pide tests unitarios específicos para tu función.",
+      "reveals": [
+        [
+          "Agregar tests",
+          "Añade tests unitarios"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Entender código": "Explica qué hace",
+    "Crear archivo": "Crea un archivo para",
+    "Buscar bug": "Por qué falla esto",
+    "Refactorizar": "Mejora legibilidad",
+    "Agregar tests": "Añade tests unitarios"
+  }
+}

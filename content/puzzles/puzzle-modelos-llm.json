@@ -1,0 +1,77 @@
+{
+  "id": "puzzle-modelos-llm",
+  "title": "Conoce los Modelos",
+  "description": "Relaciona cada modelo con su empresa creadora.",
+  "difficulty": "easy",
+  "category": "fundamentals",
+  "xp_reward": 25,
+  "time_limit": 240,
+  "grid_size": {
+    "rows": 4,
+    "cols": 4
+  },
+  "categories": [
+    {
+      "name": "Modelo",
+      "items": [
+        "GPT-4",
+        "Claude",
+        "Gemini",
+        "LLaMA"
+      ]
+    },
+    {
+      "name": "Empresa",
+      "items": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Meta"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "GPT-4 es el modelo insignia de OpenAI.",
+      "reveals": [
+        [
+          "GPT-4",
+          "OpenAI"
+        ]
+      ]
+    },
+    {
+      "text": "Claude es desarrollado por Anthropic, enfocado en seguridad.",
+      "reveals": [
+        [
+          "Claude",
+          "Anthropic"
+        ]
+      ]
+    },
+    {
+      "text": "Gemini (antes Bard) es el modelo de Google.",
+      "reveals": [
+        [
+          "Gemini",
+          "Google"
+        ]
+      ]
+    },
+    {
+      "text": "LLaMA es el modelo open source de Meta.",
+      "reveals": [
+        [
+          "LLaMA",
+          "Meta"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "GPT-4": "OpenAI",
+    "Claude": "Anthropic",
+    "Gemini": "Google",
+    "LLaMA": "Meta"
+  }
+}

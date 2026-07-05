@@ -1,0 +1,40 @@
+{
+  "id": "bienvenida",
+  "title": "Bienvenida al template",
+  "category": "getting-started",
+  "difficulty": "beginner",
+  "duration": 5,
+  "xp_reward": 25,
+  "icon": "👋",
+  "description": "Qué es cwc-cool-workshop-course y qué trae de fábrica.",
+  "questions": [
+    "¿Qué partes del template se editan para crear un curso nuevo?",
+    "¿Dónde vive el contenido de las lecciones?"
+  ],
+  "objectives": [
+    "Entender la separación contenido/motor",
+    "Conocer las features incluidas: lecciones, práctica, quizzes, puzzles y gamificación"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "title": "Contenido y motor separados",
+      "content": "Este template sigue el principio de The Carpentries Workbench: **el contenido y el motor viven separados**.\n\nTodo lo que un autor de curso edita está en `content/`: las lecciones, los quizzes, los puzzles y la configuración del curso (`course.json`). El motor en `engine/` no se toca."
+    },
+    {
+      "type": "tip",
+      "content": "Cada lección abre con preguntas guía (questions) y objetivos, y cierra con keypoints — la anatomía Carpentries. Escribe las preguntas ANTES que el cuerpo: definen qué debe poder responder el estudiante al terminar."
+    },
+    {
+      "type": "text",
+      "title": "Soporte de matemáticas",
+      "content": "El template trae KaTeX vendoreado (sin CDN). Puedes escribir fórmulas en el contenido: $$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$$"
+    }
+  ],
+  "keypoints": [
+    "El contenido vive en content/, el motor en engine/",
+    "La anatomía de lección es: questions → objectives → cuerpo → keypoints",
+    "KaTeX renderiza matemáticas sin depender de la red"
+  ],
+  "next_lesson": "tu-propio-contenido"
+}

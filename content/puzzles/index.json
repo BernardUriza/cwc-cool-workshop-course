@@ -1,0 +1,125 @@
+{
+  "categories": [
+    {
+      "id": "fundamentals",
+      "name": "Fundamentos",
+      "icon": "📚",
+      "description": "Conceptos básicos de prompting"
+    },
+    {
+      "id": "techniques",
+      "name": "Técnicas",
+      "icon": "🎯",
+      "description": "Técnicas de prompting"
+    },
+    {
+      "id": "advanced",
+      "name": "Avanzado",
+      "icon": "🚀",
+      "description": "Técnicas avanzadas"
+    },
+    {
+      "id": "applications",
+      "name": "Aplicaciones",
+      "icon": "💼",
+      "description": "Casos de uso prácticos"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "icon": "🤖",
+      "description": "Programación asistida por IA con Claude Code"
+    }
+  ],
+  "difficulty_settings": {
+    "easy": {
+      "time_multiplier": 1.5,
+      "hint_penalty": 5,
+      "base_xp": 25
+    },
+    "medium": {
+      "time_multiplier": 1.0,
+      "hint_penalty": 10,
+      "base_xp": 50
+    },
+    "hard": {
+      "time_multiplier": 0.8,
+      "hint_penalty": 15,
+      "base_xp": 75
+    }
+  },
+  "puzzles": [
+    {
+      "id": "puzzle-prompts-basicos",
+      "title": "Tipos de Prompts",
+      "category": "fundamentals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "puzzle-errores-comunes",
+      "title": "Errores en Prompts",
+      "category": "fundamentals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "puzzle-componentes-prompt",
+      "title": "Anatomía del Prompt",
+      "category": "fundamentals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "puzzle-niveles-especificidad",
+      "title": "Niveles de Especificidad",
+      "category": "techniques",
+      "difficulty": "medium"
+    },
+    {
+      "id": "puzzle-tecnicas-avanzadas",
+      "title": "Técnicas Avanzadas",
+      "category": "advanced",
+      "difficulty": "hard"
+    },
+    {
+      "id": "puzzle-modelos-llm",
+      "title": "Conoce los Modelos",
+      "category": "fundamentals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "puzzle-mejores-practicas",
+      "title": "Mejores Prácticas",
+      "category": "techniques",
+      "difficulty": "medium"
+    },
+    {
+      "id": "puzzle-aplicaciones",
+      "title": "Aplicaciones de Prompts",
+      "category": "applications",
+      "difficulty": "hard"
+    },
+    {
+      "id": "puzzle-comandos-claude-code",
+      "title": "Comandos de Claude Code",
+      "category": "claude-code",
+      "difficulty": "easy"
+    },
+    {
+      "id": "puzzle-debugging-claude",
+      "title": "Debugging con Claude",
+      "category": "claude-code",
+      "difficulty": "medium"
+    },
+    {
+      "id": "puzzle-flujo-trabajo-claude",
+      "title": "Flujo de Trabajo con IA",
+      "category": "claude-code",
+      "difficulty": "medium"
+    },
+    {
+      "id": "puzzle-mejores-practicas-claude",
+      "title": "Mejores Prácticas Claude Code",
+      "category": "claude-code",
+      "difficulty": "hard"
+    }
+  ]
+}

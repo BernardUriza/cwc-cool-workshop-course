@@ -1,0 +1,338 @@
+[
+  {
+    "id": "practice-1",
+    "title": "Resumen de Texto",
+    "category": "fundamentals",
+    "difficulty": "beginner",
+    "scenario": "Necesitas que una IA resuma un artículo largo sobre cambio climático para tu presentación de 5 minutos.",
+    "task": "Escribe un prompt que pida resumir un artículo en puntos clave.",
+    "criteria": [
+      {
+        "id": "action_verb",
+        "name": "Verbo de acción",
+        "description": "Usa un verbo claro (Resume, Extrae, Lista)",
+        "check": "verb"
+      },
+      {
+        "id": "specificity",
+        "name": "Especificidad",
+        "description": "Menciona cantidad (ej: \"3 puntos\", \"5 ideas\")",
+        "check": "number"
+      },
+      {
+        "id": "format",
+        "name": "Formato",
+        "description": "Especifica el formato deseado (lista, bullets, etc)",
+        "check": "format"
+      },
+      {
+        "id": "length",
+        "name": "Longitud adecuada",
+        "description": "El prompt tiene al menos 20 palabras",
+        "check": "min_words_20"
+      }
+    ],
+    "example_prompt": "Resume el siguiente artículo sobre cambio climático en 5 puntos principales. Usa formato de lista con bullets. Cada punto debe tener máximo 2 oraciones.",
+    "hints": [
+      "Empieza con un verbo como \"Resume\", \"Extrae\" o \"Lista\"",
+      "Especifica cuántos puntos quieres",
+      "Indica el formato de salida"
+    ],
+    "xp_reward": 25
+  },
+  {
+    "id": "practice-2",
+    "title": "Explicación para Niños",
+    "category": "fundamentals",
+    "difficulty": "beginner",
+    "scenario": "Tu sobrino de 8 años te pregunta cómo funciona internet.",
+    "task": "Escribe un prompt que explique internet a un niño.",
+    "criteria": [
+      {
+        "id": "audience",
+        "name": "Audiencia clara",
+        "description": "Menciona la edad o nivel del destinatario",
+        "check": "audience"
+      },
+      {
+        "id": "simplicity",
+        "name": "Pide simplicidad",
+        "description": "Incluye palabras como \"simple\", \"fácil\", \"sencillo\"",
+        "check": "simple"
+      },
+      {
+        "id": "analogy",
+        "name": "Usa analogías",
+        "description": "Pide ejemplos o comparaciones cotidianas",
+        "check": "analogy"
+      },
+      {
+        "id": "length",
+        "name": "Longitud adecuada",
+        "description": "Al menos 15 palabras",
+        "check": "min_words_15"
+      }
+    ],
+    "example_prompt": "Explica cómo funciona internet a un niño de 8 años. Usa analogías simples como el correo postal o una biblioteca. Evita términos técnicos.",
+    "hints": [
+      "Especifica la edad: \"a un niño de 8 años\"",
+      "Pide que use comparaciones: \"como si fuera...\"",
+      "Menciona qué evitar: \"sin jerga técnica\""
+    ],
+    "xp_reward": 25
+  },
+  {
+    "id": "practice-3",
+    "title": "Few-Shot Classification",
+    "category": "techniques",
+    "difficulty": "intermediate",
+    "scenario": "Necesitas clasificar opiniones de clientes como positivas, negativas o neutras.",
+    "task": "Escribe un prompt con ejemplos (few-shot) para clasificar sentimientos.",
+    "criteria": [
+      {
+        "id": "examples",
+        "name": "Incluye ejemplos",
+        "description": "Proporciona al menos 2 ejemplos",
+        "check": "examples"
+      },
+      {
+        "id": "pattern",
+        "name": "Patrón claro",
+        "description": "Los ejemplos siguen un formato consistente",
+        "check": "pattern"
+      },
+      {
+        "id": "categories",
+        "name": "Categorías definidas",
+        "description": "Define las categorías posibles",
+        "check": "categories"
+      },
+      {
+        "id": "instruction",
+        "name": "Instrucción final",
+        "description": "Termina con el caso a clasificar",
+        "check": "classify"
+      }
+    ],
+    "example_prompt": "Clasifica el sentimiento del texto como: Positivo, Negativo o Neutro.\n\nEjemplos:\nTexto: \"¡Me encanta este producto, superó mis expectativas!\"\nSentimiento: Positivo\n\nTexto: \"El envío tardó demasiado y llegó dañado\"\nSentimiento: Negativo\n\nTexto: \"El producto cumple con lo descrito\"\nSentimiento: Neutro\n\nAhora clasifica:\nTexto: \"[TEXTO DEL CLIENTE]\"\nSentimiento:",
+    "hints": [
+      "Empieza definiendo las categorías posibles",
+      "Da 2-3 ejemplos con el formato Entrada → Salida",
+      "Termina con el caso a resolver"
+    ],
+    "xp_reward": 40
+  },
+  {
+    "id": "practice-4",
+    "title": "Chain of Thought",
+    "category": "techniques",
+    "difficulty": "intermediate",
+    "scenario": "Tienes un problema de lógica: \"Si todos los gatos son animales, y algunos animales son mascotas, ¿todos los gatos son mascotas?\"",
+    "task": "Escribe un prompt que haga pensar paso a paso al modelo.",
+    "criteria": [
+      {
+        "id": "step_by_step",
+        "name": "Paso a paso",
+        "description": "Incluye \"paso a paso\", \"step by step\" o similar",
+        "check": "step_by_step"
+      },
+      {
+        "id": "reasoning",
+        "name": "Pide razonamiento",
+        "description": "Pide explicar el razonamiento",
+        "check": "reasoning"
+      },
+      {
+        "id": "conclusion",
+        "name": "Conclusión final",
+        "description": "Pide una conclusión clara",
+        "check": "conclusion"
+      },
+      {
+        "id": "problem_clear",
+        "name": "Problema claro",
+        "description": "El problema está bien definido",
+        "check": "min_words_25"
+      }
+    ],
+    "example_prompt": "Resuelve este problema de lógica paso a paso:\n\n\"Si todos los gatos son animales, y algunos animales son mascotas, ¿todos los gatos son mascotas?\"\n\n1. Primero, identifica las premisas\n2. Luego, analiza las relaciones lógicas\n3. Finalmente, da tu conclusión con justificación",
+    "hints": [
+      "Usa \"paso a paso\" o \"pensemos esto\"",
+      "Pide que muestre su razonamiento",
+      "Solicita una conclusión final"
+    ],
+    "xp_reward": 40
+  },
+  {
+    "id": "practice-5",
+    "title": "Role Prompting para Código",
+    "category": "techniques",
+    "difficulty": "intermediate",
+    "scenario": "Necesitas ayuda para revisar código Python y encontrar posibles bugs.",
+    "task": "Escribe un prompt asignando un rol de experto en código.",
+    "criteria": [
+      {
+        "id": "role",
+        "name": "Asigna rol",
+        "description": "Incluye \"Actúa como\" o \"Eres un\"",
+        "check": "role"
+      },
+      {
+        "id": "expertise",
+        "name": "Expertise específico",
+        "description": "Menciona el área de expertise",
+        "check": "expertise"
+      },
+      {
+        "id": "task_clear",
+        "name": "Tarea clara",
+        "description": "Define qué debe hacer",
+        "check": "task"
+      },
+      {
+        "id": "aspects",
+        "name": "Aspectos a revisar",
+        "description": "Lista qué aspectos revisar",
+        "check": "aspects"
+      }
+    ],
+    "example_prompt": "Actúa como un desarrollador senior de Python con 10 años de experiencia en código limpio.\n\nRevisa el siguiente código buscando:\n- Posibles bugs o errores\n- Mejoras de rendimiento\n- Mejores prácticas de Python\n\n[CÓDIGO AQUÍ]\n\nDa tu feedback en formato de code review.",
+    "hints": [
+      "Empieza con \"Actúa como...\" o \"Eres un...\"",
+      "Sé específico: \"desarrollador senior de Python\"",
+      "Lista los aspectos que debe revisar"
+    ],
+    "xp_reward": 40
+  },
+  {
+    "id": "practice-6",
+    "title": "Prompt para Claude Code",
+    "category": "claude-code",
+    "difficulty": "intermediate",
+    "scenario": "Tienes un archivo utils.py y quieres agregar una función para validar emails.",
+    "task": "Escribe cómo le pedirías a Claude Code que agregue esta función.",
+    "criteria": [
+      {
+        "id": "file_specific",
+        "name": "Archivo específico",
+        "description": "Menciona el archivo a modificar",
+        "check": "file"
+      },
+      {
+        "id": "function_name",
+        "name": "Nombre de función",
+        "description": "Define nombre de la función",
+        "check": "function"
+      },
+      {
+        "id": "requirements",
+        "name": "Requisitos claros",
+        "description": "Lista qué debe hacer la función",
+        "check": "requirements"
+      },
+      {
+        "id": "style",
+        "name": "Estilo del proyecto",
+        "description": "Menciona seguir el estilo existente",
+        "check": "style"
+      }
+    ],
+    "example_prompt": "En el archivo utils.py, agrega una función validate_email que:\n- Reciba un string con el email\n- Retorne True si es válido, False si no\n- Use expresiones regulares\n- Incluya docstring y type hints\n\nSigue el estilo del código existente en el proyecto.",
+    "hints": [
+      "Menciona el archivo: \"En utils.py...\"",
+      "Define el nombre de la función",
+      "Lista los requisitos como bullets",
+      "Pide que siga el estilo existente"
+    ],
+    "xp_reward": 50
+  },
+  {
+    "id": "practice-7",
+    "title": "Debug con Claude Code",
+    "category": "claude-code",
+    "difficulty": "intermediate",
+    "scenario": "Tu código lanza un TypeError: \"NoneType object is not subscriptable\" en la línea 45.",
+    "task": "Escribe cómo le pedirías a Claude Code que te ayude a debuggear.",
+    "criteria": [
+      {
+        "id": "error_type",
+        "name": "Tipo de error",
+        "description": "Incluye el mensaje de error",
+        "check": "error"
+      },
+      {
+        "id": "location",
+        "name": "Ubicación",
+        "description": "Menciona dónde ocurre (archivo/línea)",
+        "check": "location"
+      },
+      {
+        "id": "expected",
+        "name": "Comportamiento esperado",
+        "description": "Describe qué debería pasar",
+        "check": "expected"
+      },
+      {
+        "id": "context",
+        "name": "Contexto",
+        "description": "Da contexto sobre qué hace el código",
+        "check": "context"
+      }
+    ],
+    "example_prompt": "Tengo un error en mi código:\n\nError: TypeError: 'NoneType' object is not subscriptable\nArchivo: api_handler.py, línea 45\n\nEl código intenta acceder a datos de una respuesta de API. Debería obtener el campo \"user\" del JSON.\n\n¿Puedes explicar por qué ocurre este error y cómo solucionarlo?",
+    "hints": [
+      "Pega el mensaje de error completo",
+      "Indica archivo y línea",
+      "Explica qué debería hacer el código",
+      "Pide explicación Y solución"
+    ],
+    "xp_reward": 50
+  },
+  {
+    "id": "practice-8",
+    "title": "Proyecto Final: Tu Prompt",
+    "category": "project",
+    "difficulty": "advanced",
+    "scenario": "Elige un caso real de tu vida (trabajo, estudios, hobby) donde usarías IA.",
+    "task": "Crea un prompt completo usando todas las técnicas aprendidas.",
+    "criteria": [
+      {
+        "id": "context",
+        "name": "Contexto",
+        "description": "Proporciona contexto relevante",
+        "check": "context"
+      },
+      {
+        "id": "specificity",
+        "name": "Especificidad",
+        "description": "Es específico sobre qué necesitas",
+        "check": "specific"
+      },
+      {
+        "id": "format",
+        "name": "Formato",
+        "description": "Especifica el formato de salida",
+        "check": "format"
+      },
+      {
+        "id": "technique",
+        "name": "Técnica aplicada",
+        "description": "Usa alguna técnica (CoT, few-shot, role)",
+        "check": "technique"
+      },
+      {
+        "id": "complete",
+        "name": "Completitud",
+        "description": "El prompt está completo y listo para usar",
+        "check": "min_words_40"
+      }
+    ],
+    "example_prompt": "No hay ejemplo - ¡este es TU prompt único!",
+    "hints": [
+      "Piensa en algo que realmente necesites resolver",
+      "Combina varias técnicas",
+      "Imagina que vas a usar este prompt de verdad"
+    ],
+    "xp_reward": 100
+  }
+]

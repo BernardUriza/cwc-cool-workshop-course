@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "category": "fundamentals",
+    "question": "¿Qué es un \"prompt\" en el contexto de IA?",
+    "options": [
+      "Un tipo de base de datos",
+      "Una instrucción o texto que le das a un modelo de IA",
+      "Un lenguaje de programación",
+      "Un tipo de red neuronal"
+    ],
+    "correct": 1,
+    "explanation": "Un prompt es el texto o instrucción que envías a un modelo de IA para obtener una respuesta."
+  },
+  {
+    "id": 2,
+    "category": "fundamentals",
+    "question": "¿Por qué es importante ser específico en un prompt?",
+    "options": [
+      "Para que el modelo procese más rápido",
+      "Para obtener respuestas más relevantes y precisas",
+      "Para usar menos tokens",
+      "No es importante, cualquier prompt funciona igual"
+    ],
+    "correct": 1,
+    "explanation": "La especificidad ayuda al modelo a entender exactamente qué necesitas, resultando en respuestas más útiles."
+  },
+  {
+    "id": 3,
+    "category": "fundamentals",
+    "question": "¿Qué información es útil incluir como contexto en un prompt?",
+    "options": [
+      "Solo la pregunta principal",
+      "Tu rol, la audiencia, el propósito y restricciones",
+      "La fecha y hora actual",
+      "Tu nombre y ubicación"
+    ],
+    "correct": 1,
+    "explanation": "El contexto (rol, audiencia, propósito, restricciones) ayuda al modelo a dar respuestas más apropiadas."
+  },
+  {
+    "id": 4,
+    "category": "fundamentals",
+    "question": "¿Qué significa que un LLM pueda \"alucinar\"?",
+    "options": [
+      "Que procesa imágenes",
+      "Que genera información falsa o inventada con confianza",
+      "Que entiende múltiples idiomas",
+      "Que responde muy rápido"
+    ],
+    "correct": 1,
+    "explanation": "Los LLMs pueden generar información que parece correcta pero es falsa. Siempre verifica datos importantes."
+  },
+  {
+    "id": 5,
+    "category": "fundamentals",
+    "question": "¿Cuál es un buen verbo para iniciar un prompt?",
+    "options": [
+      "\"Intenta\"",
+      "\"Podrías\"",
+      "\"Analiza\" o \"Resume\"",
+      "\"Tal vez\""
+    ],
+    "correct": 2,
+    "explanation": "Verbos de acción claros como \"Analiza\", \"Resume\", \"Compara\" dan instrucciones directas al modelo."
+  },
+  {
+    "id": 6,
+    "category": "techniques",
+    "question": "¿Qué es \"Zero-Shot Prompting\"?",
+    "options": [
+      "Un prompt sin ninguna palabra",
+      "Pedir una tarea sin dar ejemplos previos",
+      "Un prompt que siempre falla",
+      "Usar exactamente cero tokens"
+    ],
+    "correct": 1,
+    "explanation": "Zero-shot significa pedir al modelo que realice una tarea sin proporcionarle ejemplos de cómo hacerla."
+  },
+  {
+    "id": 7,
+    "category": "techniques",
+    "question": "¿Cuándo usarías \"Few-Shot Prompting\"?",
+    "options": [
+      "Cuando quieres respuestas cortas",
+      "Cuando necesitas un formato o estilo específico",
+      "Cuando el modelo es lento",
+      "Cuando no tienes internet"
+    ],
+    "correct": 1,
+    "explanation": "Few-shot es ideal cuando necesitas que el modelo siga un patrón específico, proporcionando 2-5 ejemplos."
+  },
+  {
+    "id": 8,
+    "category": "techniques",
+    "question": "¿Qué técnica usarías para resolver un problema matemático complejo?",
+    "options": [
+      "Zero-shot",
+      "Role prompting",
+      "Chain of Thought (pensar paso a paso)",
+      "Prompt muy corto"
+    ],
+    "correct": 2,
+    "explanation": "Chain of Thought hace que el modelo razone paso a paso, mejorando la precisión en problemas complejos."
+  },
+  {
+    "id": 9,
+    "category": "techniques",
+    "question": "¿Qué es \"Role Prompting\"?",
+    "options": [
+      "Pedirle al modelo que actúe como un experto específico",
+      "Usar emojis en el prompt",
+      "Escribir el prompt en mayúsculas",
+      "Repetir la misma pregunta varias veces"
+    ],
+    "correct": 0,
+    "explanation": "Role prompting asigna una identidad al modelo (\"Actúa como un experto en X\") para obtener respuestas especializadas."
+  },
+  {
+    "id": 10,
+    "category": "techniques",
+    "question": "¿Qué es \"Prompt Chaining\"?",
+    "options": [
+      "Escribir prompts muy largos",
+      "Dividir tareas complejas en pasos secuenciales",
+      "Usar muchos emojis encadenados",
+      "Copiar y pegar el mismo prompt"
+    ],
+    "correct": 1,
+    "explanation": "Prompt chaining divide tareas complejas en pasos, donde la salida de uno alimenta al siguiente."
+  },
+  {
+    "id": 11,
+    "category": "claude-code",
+    "question": "¿Qué es Claude Code?",
+    "options": [
+      "Un lenguaje de programación",
+      "Una herramienta de IA para programar desde la terminal",
+      "Un editor de texto",
+      "Una base de datos"
+    ],
+    "correct": 1,
+    "explanation": "Claude Code es un asistente de IA que te ayuda a programar directamente desde tu terminal."
+  },
+  {
+    "id": 12,
+    "category": "claude-code",
+    "question": "¿Qué comando usarías para instalar Claude Code?",
+    "options": [
+      "pip install claude",
+      "npm install -g @anthropic-ai/claude-code",
+      "brew install claude",
+      "apt-get install claude"
+    ],
+    "correct": 1,
+    "explanation": "Claude Code se instala globalmente con npm: npm install -g @anthropic-ai/claude-code"
+  },
+  {
+    "id": 13,
+    "category": "claude-code",
+    "question": "¿Qué es un MCP en el contexto de Claude Code?",
+    "options": [
+      "Un tipo de archivo de código",
+      "Un protocolo que da capacidades extra a Claude",
+      "Un mensaje de error",
+      "Una métrica de rendimiento"
+    ],
+    "correct": 1,
+    "explanation": "MCP (Model Context Protocol) son plugins que dan superpoderes a Claude, como acceso a GitHub o bases de datos."
+  },
+  {
+    "id": 14,
+    "category": "claude-code",
+    "question": "¿Qué deberías hacer antes de aceptar código generado por Claude Code?",
+    "options": [
+      "Ejecutarlo inmediatamente",
+      "Borrarlo todo",
+      "Revisar y entender los cambios propuestos",
+      "Ignorar las advertencias"
+    ],
+    "correct": 2,
+    "explanation": "Siempre revisa el código generado. Tú eres responsable del código final en tu proyecto."
+  },
+  {
+    "id": 15,
+    "category": "claude-code",
+    "question": "¿Cómo le pedirías a Claude Code que explique un error?",
+    "options": [
+      "Solo diciendo \"error\"",
+      "Pegando el mensaje de error completo incluyendo stack trace",
+      "Describiendo el error de memoria",
+      "No se puede, hay que buscarlo en Google"
+    ],
+    "correct": 1,
+    "explanation": "Pegar el error completo con stack trace permite a Claude rastrear exactamente el origen del problema."
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "name": "CWC Demo Course",
+  "logo": "🎓",
+  "tagline": "Curso demo del template cwc-cool-workshop-course",
+  "description": "Reemplaza content/ con tu propio curso. El engine no se toca.",
+  "language": "es",
+  "footer": "Construido con cwc-cool-workshop-course",
+  "features": {
+    "lessons": true,
+    "practice": true,
+    "assessment": true,
+    "puzzles": true,
+    "playground": true,
+    "retrieval": true,
+    "final_project": true
+  }
+}

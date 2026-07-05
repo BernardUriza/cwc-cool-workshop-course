@@ -1,0 +1,89 @@
+{
+  "id": "puzzle-tecnicas-avanzadas",
+  "title": "Técnicas Avanzadas",
+  "description": "Relaciona cada técnica avanzada con su caso de uso ideal.",
+  "difficulty": "hard",
+  "category": "advanced",
+  "xp_reward": 75,
+  "time_limit": 480,
+  "grid_size": {
+    "rows": 5,
+    "cols": 5
+  },
+  "categories": [
+    {
+      "name": "Técnica",
+      "items": [
+        "Self-Consistency",
+        "Tree of Thought",
+        "ReAct",
+        "Prompt Chaining",
+        "Meta-Prompt"
+      ]
+    },
+    {
+      "name": "Caso de Uso",
+      "items": [
+        "Verificar respuestas",
+        "Explorar opciones",
+        "Usar herramientas",
+        "Dividir tareas",
+        "Generar prompts"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "Self-Consistency genera múltiples respuestas para verificar cuál es más común.",
+      "reveals": [
+        [
+          "Self-Consistency",
+          "Verificar respuestas"
+        ]
+      ]
+    },
+    {
+      "text": "Tree of Thought explora múltiples caminos de razonamiento.",
+      "reveals": [
+        [
+          "Tree of Thought",
+          "Explorar opciones"
+        ]
+      ]
+    },
+    {
+      "text": "ReAct combina razonamiento con acciones (usar herramientas).",
+      "reveals": [
+        [
+          "ReAct",
+          "Usar herramientas"
+        ]
+      ]
+    },
+    {
+      "text": "Prompt Chaining divide tareas complejas en pasos más simples.",
+      "reveals": [
+        [
+          "Prompt Chaining",
+          "Dividir tareas"
+        ]
+      ]
+    },
+    {
+      "text": "Meta-Prompting usa IA para generar o mejorar prompts.",
+      "reveals": [
+        [
+          "Meta-Prompt",
+          "Generar prompts"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Self-Consistency": "Verificar respuestas",
+    "Tree of Thought": "Explorar opciones",
+    "ReAct": "Usar herramientas",
+    "Prompt Chaining": "Dividir tareas",
+    "Meta-Prompt": "Generar prompts"
+  }
+}

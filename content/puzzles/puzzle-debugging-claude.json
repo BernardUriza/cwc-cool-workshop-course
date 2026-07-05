@@ -1,0 +1,77 @@
+{
+  "id": "puzzle-debugging-claude",
+  "title": "Debugging con Claude",
+  "description": "Identifica la mejor estrategia de debugging para cada situación.",
+  "difficulty": "medium",
+  "category": "claude-code",
+  "xp_reward": 55,
+  "time_limit": 360,
+  "grid_size": {
+    "rows": 4,
+    "cols": 4
+  },
+  "categories": [
+    {
+      "name": "Situación",
+      "items": [
+        "Error de sintaxis",
+        "Bug lógico",
+        "Error de runtime",
+        "Código lento"
+      ]
+    },
+    {
+      "name": "Estrategia",
+      "items": [
+        "Mostrar el error",
+        "Explicar paso a paso",
+        "Incluir stack trace",
+        "Pedir optimización"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "Los errores de sintaxis se resuelven mejor mostrando el mensaje de error exacto.",
+      "reveals": [
+        [
+          "Error de sintaxis",
+          "Mostrar el error"
+        ]
+      ]
+    },
+    {
+      "text": "Los bugs lógicos requieren que Claude explique el flujo paso a paso.",
+      "reveals": [
+        [
+          "Bug lógico",
+          "Explicar paso a paso"
+        ]
+      ]
+    },
+    {
+      "text": "Los errores de runtime necesitan el stack trace completo para contexto.",
+      "reveals": [
+        [
+          "Error de runtime",
+          "Incluir stack trace"
+        ]
+      ]
+    },
+    {
+      "text": "El código lento se mejora pidiendo optimización específica.",
+      "reveals": [
+        [
+          "Código lento",
+          "Pedir optimización"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Error de sintaxis": "Mostrar el error",
+    "Bug lógico": "Explicar paso a paso",
+    "Error de runtime": "Incluir stack trace",
+    "Código lento": "Pedir optimización"
+  }
+}

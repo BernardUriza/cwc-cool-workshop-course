@@ -1,0 +1,89 @@
+{
+  "id": "puzzle-aplicaciones",
+  "title": "Aplicaciones de Prompts",
+  "description": "Empareja cada aplicación con la técnica más adecuada.",
+  "difficulty": "hard",
+  "category": "applications",
+  "xp_reward": 70,
+  "time_limit": 420,
+  "grid_size": {
+    "rows": 5,
+    "cols": 5
+  },
+  "categories": [
+    {
+      "name": "Aplicación",
+      "items": [
+        "Clasificar emails",
+        "Resolver matemáticas",
+        "Generar código",
+        "Traducir textos",
+        "Analizar sentimiento"
+      ]
+    },
+    {
+      "name": "Técnica Ideal",
+      "items": [
+        "Few-Shot",
+        "Chain of Thought",
+        "Role + Contexto",
+        "Zero-Shot",
+        "Few-Shot + Formato"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "Clasificar emails requiere ejemplos de cada categoría (Few-Shot).",
+      "reveals": [
+        [
+          "Clasificar emails",
+          "Few-Shot"
+        ]
+      ]
+    },
+    {
+      "text": "Resolver matemáticas se beneficia del razonamiento paso a paso.",
+      "reveals": [
+        [
+          "Resolver matemáticas",
+          "Chain of Thought"
+        ]
+      ]
+    },
+    {
+      "text": "Generar código necesita rol de desarrollador y contexto del proyecto.",
+      "reveals": [
+        [
+          "Generar código",
+          "Role + Contexto"
+        ]
+      ]
+    },
+    {
+      "text": "Traducir textos simples funciona bien con Zero-Shot.",
+      "reveals": [
+        [
+          "Traducir textos",
+          "Zero-Shot"
+        ]
+      ]
+    },
+    {
+      "text": "Analizar sentimiento requiere ejemplos y formato de salida.",
+      "reveals": [
+        [
+          "Analizar sentimiento",
+          "Few-Shot + Formato"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Clasificar emails": "Few-Shot",
+    "Resolver matemáticas": "Chain of Thought",
+    "Generar código": "Role + Contexto",
+    "Traducir textos": "Zero-Shot",
+    "Analizar sentimiento": "Few-Shot + Formato"
+  }
+}

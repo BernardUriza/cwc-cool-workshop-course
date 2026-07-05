@@ -1,0 +1,89 @@
+{
+  "id": "puzzle-componentes-prompt",
+  "title": "Anatomía del Prompt",
+  "description": "Empareja cada componente con su función en un prompt.",
+  "difficulty": "easy",
+  "category": "fundamentals",
+  "xp_reward": 35,
+  "time_limit": 300,
+  "grid_size": {
+    "rows": 5,
+    "cols": 5
+  },
+  "categories": [
+    {
+      "name": "Componente",
+      "items": [
+        "Rol",
+        "Contexto",
+        "Tarea",
+        "Formato",
+        "Restricción"
+      ]
+    },
+    {
+      "name": "Función",
+      "items": [
+        "Define quién",
+        "Info de fondo",
+        "Qué hacer",
+        "Cómo presentar",
+        "Límites"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "El Rol define quién debe ser el modelo (experto, profesor, etc.).",
+      "reveals": [
+        [
+          "Rol",
+          "Define quién"
+        ]
+      ]
+    },
+    {
+      "text": "El Contexto proporciona información de fondo relevante.",
+      "reveals": [
+        [
+          "Contexto",
+          "Info de fondo"
+        ]
+      ]
+    },
+    {
+      "text": "La Tarea especifica qué debe hacer el modelo.",
+      "reveals": [
+        [
+          "Tarea",
+          "Qué hacer"
+        ]
+      ]
+    },
+    {
+      "text": "El Formato indica cómo presentar la respuesta (lista, tabla, etc.).",
+      "reveals": [
+        [
+          "Formato",
+          "Cómo presentar"
+        ]
+      ]
+    },
+    {
+      "text": "Las Restricciones establecen límites (longitud, tono, etc.).",
+      "reveals": [
+        [
+          "Restricción",
+          "Límites"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Rol": "Define quién",
+    "Contexto": "Info de fondo",
+    "Tarea": "Qué hacer",
+    "Formato": "Cómo presentar",
+    "Restricción": "Límites"
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "daily_tips": [
+    {
+      "id": "tip-specificity",
+      "title": "Sé específico",
+      "content": "Cuanto más específico seas en tu prompt, mejores resultados obtendrás. En lugar de 'escribe sobre perros', prueba 'escribe 3 beneficios de tener un golden retriever para familias con niños'.",
+      "category": "fundamentals",
+      "icon": "🎯"
+    },
+    {
+      "id": "tip-context",
+      "title": "Proporciona contexto",
+      "content": "Los LLMs no conocen tu situación. Siempre proporciona el contexto relevante: tu rol, la audiencia, el propósito y cualquier restricción importante.",
+      "category": "fundamentals",
+      "icon": "📝"
+    },
+    {
+      "id": "tip-format",
+      "title": "Especifica el formato",
+      "content": "Si necesitas la respuesta en un formato específico (lista, tabla, JSON), dilo explícitamente. Esto ahorra tiempo de reformateo.",
+      "category": "fundamentals",
+      "icon": "📋"
+    },
+    {
+      "id": "tip-iterate",
+      "title": "Itera y mejora",
+      "content": "Rara vez el primer prompt es perfecto. Usa la respuesta para identificar qué falta y refina tu prompt en iteraciones sucesivas.",
+      "category": "techniques",
+      "icon": "🔄"
+    },
+    {
+      "id": "tip-examples",
+      "title": "Los ejemplos son poderosos",
+      "content": "Cuando necesitas un formato o estilo específico, proporcionar 2-3 ejemplos (few-shot) es más efectivo que describirlo con palabras.",
+      "category": "techniques",
+      "icon": "💡"
+    },
+    {
+      "id": "tip-step-by-step",
+      "title": "Piensa paso a paso",
+      "content": "Para problemas complejos, pide al modelo que 'piense paso a paso'. Esto activa Chain of Thought y mejora el razonamiento.",
+      "category": "techniques",
+      "icon": "🔗"
+    },
+    {
+      "id": "tip-role",
+      "title": "Asigna un rol",
+      "content": "Empezar con 'Actúa como un experto en X' cambia cómo el modelo procesa y responde. Usa roles específicos y relevantes.",
+      "category": "techniques",
+      "icon": "🎭"
+    },
+    {
+      "id": "tip-constraints",
+      "title": "Usa restricciones",
+      "content": "Limita la longitud, el tono o el vocabulario cuando sea apropiado. 'Máximo 100 palabras' o 'sin jerga técnica' dan resultados más útiles.",
+      "category": "fundamentals",
+      "icon": "⚖️"
+    },
+    {
+      "id": "tip-negative",
+      "title": "Di qué NO hacer",
+      "content": "A veces es útil especificar qué evitar: 'No uses lenguaje técnico', 'Evita clichés', 'No repitas información'.",
+      "category": "techniques",
+      "icon": "🚫"
+    },
+    {
+      "id": "tip-temperature",
+      "title": "Ajusta la temperatura",
+      "content": "Temperature baja (0-0.3) para respuestas precisas y consistentes. Temperature alta (0.7-1) para creatividad y variedad.",
+      "category": "advanced",
+      "icon": "🌡️"
+    },
+    {
+      "id": "tip-chain",
+      "title": "Divide y vencerás",
+      "content": "Tareas complejas se resuelven mejor dividiéndolas en pasos simples. Prompt chaining: la salida de uno alimenta al siguiente.",
+      "category": "advanced",
+      "icon": "⛓️"
+    },
+    {
+      "id": "tip-verify",
+      "title": "Verifica la información",
+      "content": "Los LLMs pueden 'alucinar' información. Siempre verifica datos importantes, especialmente fechas, estadísticas y citas.",
+      "category": "fundamentals",
+      "icon": "✅"
+    },
+    {
+      "id": "tip-simplicity",
+      "title": "Empieza simple",
+      "content": "Intenta primero el prompt más simple (zero-shot). Solo añade complejidad si es necesario. Menos es más.",
+      "category": "fundamentals",
+      "icon": "✨"
+    },
+    {
+      "id": "tip-audience",
+      "title": "Conoce tu audiencia",
+      "content": "Especifica para quién es el contenido: 'para un niño de 10 años', 'para ejecutivos', 'para desarrolladores junior'.",
+      "category": "techniques",
+      "icon": "👥"
+    },
+    {
+      "id": "tip-action-verbs",
+      "title": "Usa verbos de acción",
+      "content": "Empieza con verbos claros: 'Analiza', 'Compara', 'Resume', 'Genera', 'Traduce', 'Evalúa'. Evita 'Intenta' o 'Podrías'.",
+      "category": "fundamentals",
+      "icon": "💪"
+    },
+    {
+      "id": "tip-claude-context",
+      "title": "Claude Code: Contexto es clave",
+      "content": "En Claude Code, tu proyecto ES el contexto. Claude puede leer tus archivos, así que aprovéchalo: 'basándote en el estilo de este proyecto, agrega...'",
+      "category": "claude-code",
+      "icon": "🤖"
+    },
+    {
+      "id": "tip-claude-specific-files",
+      "title": "Sé específico con archivos",
+      "content": "En Claude Code, menciona archivos específicos: 'en src/utils.py, agrega una función para validar emails'. Claude los encontrará y editará directamente.",
+      "category": "claude-code",
+      "icon": "📁"
+    },
+    {
+      "id": "tip-claude-explain-first",
+      "title": "Pide explicaciones primero",
+      "content": "Antes de modificar código desconocido, pide: 'Explica qué hace esta función antes de modificarla'. Entenderás mejor el cambio.",
+      "category": "claude-code",
+      "icon": "🔍"
+    },
+    {
+      "id": "tip-claude-small-steps",
+      "title": "Pasos pequeños en Claude Code",
+      "content": "Haz cambios incrementales y verifica cada uno. Es más fácil identificar problemas cuando los cambios son pequeños y frecuentes.",
+      "category": "claude-code",
+      "icon": "👣"
+    },
+    {
+      "id": "tip-claude-error-paste",
+      "title": "Pega errores completos",
+      "content": "Cuando tengas un error, pega el mensaje completo incluyendo el stack trace. Claude Code puede rastrear exactamente dónde está el problema.",
+      "category": "claude-code",
+      "icon": "🐛"
+    },
+    {
+      "id": "tip-claude-review",
+      "title": "Revisa antes de aceptar",
+      "content": "Claude Code te muestra los cambios antes de aplicarlos. SIEMPRE revisa el código generado. Tú eres responsable del código final.",
+      "category": "claude-code",
+      "icon": "👁️"
+    },
+    {
+      "id": "tip-claude-natural",
+      "title": "Habla naturalmente",
+      "content": "Con Claude Code puedes escribir como si hablaras con un colega: 'este botón no funciona, ¿puedes ver qué pasa?' Es conversacional.",
+      "category": "claude-code",
+      "icon": "💬"
+    },
+    {
+      "id": "tip-claude-tests",
+      "title": "Pide tests siempre",
+      "content": "Después de que Claude genere código, pide: 'agrega tests para esta función'. Verificar código generado con tests es una buena práctica.",
+      "category": "claude-code",
+      "icon": "✅"
+    }
+  ],
+  "technique_cards": [
+    {
+      "id": "zero-shot",
+      "name": "Zero-Shot",
+      "description": "Pide directamente sin dar ejemplos",
+      "when_to_use": "Tareas comunes y bien definidas",
+      "example": "Clasifica este texto como positivo o negativo: [texto]",
+      "icon": "0️⃣"
+    },
+    {
+      "id": "few-shot",
+      "name": "Few-Shot",
+      "description": "Proporciona 2-5 ejemplos antes de tu caso",
+      "when_to_use": "Cuando necesitas un formato o estilo específico",
+      "example": "Entrada: hola → Salida: HOLA\nEntrada: mundo → Salida:",
+      "icon": "📝"
+    },
+    {
+      "id": "cot",
+      "name": "Chain of Thought",
+      "description": "Pide razonamiento paso a paso",
+      "when_to_use": "Problemas de matemáticas, lógica o análisis",
+      "example": "Resuelve este problema paso a paso...",
+      "icon": "🔗"
+    },
+    {
+      "id": "role",
+      "name": "Role Prompting",
+      "description": "Asigna una identidad o perspectiva",
+      "when_to_use": "Cuando necesitas experiencia o tono específico",
+      "example": "Actúa como un experto en marketing digital...",
+      "icon": "🎭"
+    },
+    {
+      "id": "self-consistency",
+      "name": "Self-Consistency",
+      "description": "Genera múltiples respuestas y elige la más común",
+      "when_to_use": "Cuando la precisión es crítica",
+      "example": "Ejecutar el mismo prompt 5 veces y comparar",
+      "icon": "🔄"
+    },
+    {
+      "id": "prompt-chaining",
+      "name": "Prompt Chaining",
+      "description": "Divide en pasos secuenciales",
+      "when_to_use": "Tareas complejas con múltiples etapas",
+      "example": "1. Extrae → 2. Analiza → 3. Resume",
+      "icon": "⛓️"
+    }
+  ],
+  "quick_templates": [
+    {
+      "id": "summary",
+      "name": "Resumen",
+      "template": "Resume el siguiente texto en [N] puntos principales:\n\n[TEXTO]",
+      "icon": "📄"
+    },
+    {
+      "id": "explain",
+      "name": "Explicación",
+      "template": "Explica [TEMA] a [AUDIENCIA] usando [ESTILO/ANALOGÍAS].\n\nEvita: [RESTRICCIONES]",
+      "icon": "💡"
+    },
+    {
+      "id": "analyze",
+      "name": "Análisis",
+      "template": "Analiza [OBJETO] considerando:\n1. [ASPECTO 1]\n2. [ASPECTO 2]\n3. [ASPECTO 3]\n\nPresenta pros y contras.",
+      "icon": "🔍"
+    },
+    {
+      "id": "code",
+      "name": "Código",
+      "template": "Escribe una función en [LENGUAJE] que:\n- [REQUISITO 1]\n- [REQUISITO 2]\n\nIncluye: type hints, docstring, manejo de errores.",
+      "icon": "💻"
+    },
+    {
+      "id": "review",
+      "name": "Revisión",
+      "template": "Revisa el siguiente [TIPO] y sugiere mejoras:\n\n[CONTENIDO]\n\nEnfócate en: [ASPECTOS]",
+      "icon": "✏️"
+    },
+    {
+      "id": "compare",
+      "name": "Comparación",
+      "template": "Compara [A] y [B] en términos de:\n- [CRITERIO 1]\n- [CRITERIO 2]\n\nFormato: tabla comparativa.",
+      "icon": "⚖️"
+    },
+    {
+      "id": "claude-explain",
+      "name": "Explicar código",
+      "template": "Explica qué hace [ARCHIVO/FUNCIÓN]. Describe:\n- Propósito principal\n- Entradas y salidas\n- Flujo de datos",
+      "icon": "🤖"
+    },
+    {
+      "id": "claude-debug",
+      "name": "Debug con Claude",
+      "template": "Este código produce [ERROR]. El comportamiento esperado es [ESPERADO] pero obtengo [ACTUAL].\n\n[PEGAR ERROR COMPLETO]",
+      "icon": "🐛"
+    },
+    {
+      "id": "claude-refactor",
+      "name": "Refactorizar",
+      "template": "Refactoriza [ARCHIVO/FUNCIÓN] para mejorar:\n- [ASPECTO 1]\n- [ASPECTO 2]\n\nMantén la funcionalidad existente.",
+      "icon": "🔧"
+    },
+    {
+      "id": "claude-feature",
+      "name": "Nueva función",
+      "template": "Agrega una función en [ARCHIVO] que:\n- [REQUISITO 1]\n- [REQUISITO 2]\n\nSigue el estilo del proyecto existente.",
+      "icon": "✨"
+    }
+  ]
+}

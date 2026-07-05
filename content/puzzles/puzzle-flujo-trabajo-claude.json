@@ -1,0 +1,77 @@
+{
+  "id": "puzzle-flujo-trabajo-claude",
+  "title": "Flujo de Trabajo con IA",
+  "description": "Ordena los pasos de un flujo de trabajo efectivo con Claude Code.",
+  "difficulty": "medium",
+  "category": "claude-code",
+  "xp_reward": 50,
+  "time_limit": 360,
+  "grid_size": {
+    "rows": 4,
+    "cols": 4
+  },
+  "categories": [
+    {
+      "name": "Acción",
+      "items": [
+        "Describir tarea",
+        "Revisar cambios",
+        "Probar código",
+        "Iterar feedback"
+      ]
+    },
+    {
+      "name": "Orden",
+      "items": [
+        "Paso 1",
+        "Paso 2",
+        "Paso 3",
+        "Paso 4"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "El primer paso siempre es describir claramente la tarea a Claude.",
+      "reveals": [
+        [
+          "Describir tarea",
+          "Paso 1"
+        ]
+      ]
+    },
+    {
+      "text": "Después de que Claude genera código, debes revisar los cambios propuestos.",
+      "reveals": [
+        [
+          "Revisar cambios",
+          "Paso 2"
+        ]
+      ]
+    },
+    {
+      "text": "Una vez revisados, prueba el código para verificar que funciona.",
+      "reveals": [
+        [
+          "Probar código",
+          "Paso 3"
+        ]
+      ]
+    },
+    {
+      "text": "Finalmente, itera con feedback si algo no está bien.",
+      "reveals": [
+        [
+          "Iterar feedback",
+          "Paso 4"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Describir tarea": "Paso 1",
+    "Revisar cambios": "Paso 2",
+    "Probar código": "Paso 3",
+    "Iterar feedback": "Paso 4"
+  }
+}

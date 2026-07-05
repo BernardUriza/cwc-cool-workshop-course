@@ -1,0 +1,89 @@
+{
+  "id": "puzzle-mejores-practicas-claude",
+  "title": "Mejores Prácticas Claude Code",
+  "description": "Identifica si cada práctica es recomendada al usar Claude Code.",
+  "difficulty": "hard",
+  "category": "claude-code",
+  "xp_reward": 65,
+  "time_limit": 420,
+  "grid_size": {
+    "rows": 5,
+    "cols": 5
+  },
+  "categories": [
+    {
+      "name": "Práctica",
+      "items": [
+        "Dar contexto",
+        "Aceptar todo",
+        "Verificar código",
+        "Ser específico",
+        "Copiar sin leer"
+      ]
+    },
+    {
+      "name": "Recomendación",
+      "items": [
+        "Esencial",
+        "Evitar",
+        "Obligatorio",
+        "Muy útil",
+        "Peligroso"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "Dar contexto del proyecto es esencial para obtener código relevante.",
+      "reveals": [
+        [
+          "Dar contexto",
+          "Esencial"
+        ]
+      ]
+    },
+    {
+      "text": "Aceptar todas las sugerencias sin revisar es algo que debes evitar.",
+      "reveals": [
+        [
+          "Aceptar todo",
+          "Evitar"
+        ]
+      ]
+    },
+    {
+      "text": "Verificar que el código funciona es obligatorio antes de usarlo.",
+      "reveals": [
+        [
+          "Verificar código",
+          "Obligatorio"
+        ]
+      ]
+    },
+    {
+      "text": "Ser específico en tus peticiones es muy útil para mejores resultados.",
+      "reveals": [
+        [
+          "Ser específico",
+          "Muy útil"
+        ]
+      ]
+    },
+    {
+      "text": "Copiar código sin leerlo es peligroso y puede introducir bugs.",
+      "reveals": [
+        [
+          "Copiar sin leer",
+          "Peligroso"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Dar contexto": "Esencial",
+    "Aceptar todo": "Evitar",
+    "Verificar código": "Obligatorio",
+    "Ser específico": "Muy útil",
+    "Copiar sin leer": "Peligroso"
+  }
+}

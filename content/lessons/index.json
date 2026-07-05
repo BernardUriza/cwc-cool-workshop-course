@@ -1,0 +1,15 @@
+{
+  "categories": [
+    {
+      "id": "getting-started",
+      "name": "Primeros pasos",
+      "icon": "🚀",
+      "description": "Cómo funciona este template y cómo meter tu propio curso",
+      "order": 1
+    }
+  ],
+  "lessons": [
+    "bienvenida",
+    "tu-propio-contenido"
+  ]
+}

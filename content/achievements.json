@@ -1,0 +1,242 @@
+{
+  "achievements": [
+    {
+      "id": "first_lesson",
+      "name": "Primer Paso",
+      "description": "Completa tu primera lección",
+      "icon": "🎓",
+      "xp_reward": 10,
+      "category": "lessons",
+      "condition": {
+        "type": "lessons_completed",
+        "value": 1
+      }
+    },
+    {
+      "id": "lesson_streak_3",
+      "name": "Racha de Aprendizaje",
+      "description": "Completa 3 lecciones en un día",
+      "icon": "📚",
+      "xp_reward": 25,
+      "category": "lessons",
+      "condition": {
+        "type": "lessons_in_day",
+        "value": 3
+      }
+    },
+    {
+      "id": "all_fundamentals",
+      "name": "Fundamentos Sólidos",
+      "description": "Completa todas las lecciones de Fundamentos",
+      "icon": "🏛️",
+      "xp_reward": 50,
+      "category": "lessons",
+      "condition": {
+        "type": "category_complete",
+        "value": "fundamentals"
+      }
+    },
+    {
+      "id": "first_puzzle",
+      "name": "Primer Puzzle",
+      "description": "Resuelve tu primer puzzle",
+      "icon": "🧩",
+      "xp_reward": 15,
+      "category": "puzzles",
+      "condition": {
+        "type": "puzzles_solved",
+        "value": 1
+      }
+    },
+    {
+      "id": "puzzle_master_5",
+      "name": "Puzzlero",
+      "description": "Resuelve 5 puzzles",
+      "icon": "🎯",
+      "xp_reward": 40,
+      "category": "puzzles",
+      "condition": {
+        "type": "puzzles_solved",
+        "value": 5
+      }
+    },
+    {
+      "id": "perfect_puzzle",
+      "name": "Perfeccionista",
+      "description": "Obtén 3 estrellas en un puzzle",
+      "icon": "⭐",
+      "xp_reward": 20,
+      "category": "puzzles",
+      "condition": {
+        "type": "three_stars",
+        "value": 1
+      }
+    },
+    {
+      "id": "speed_demon",
+      "name": "Velocista",
+      "description": "Resuelve un puzzle en menos de 2 minutos",
+      "icon": "⚡",
+      "xp_reward": 30,
+      "category": "puzzles",
+      "condition": {
+        "type": "puzzle_time",
+        "value": 120
+      }
+    },
+    {
+      "id": "streak_3",
+      "name": "Constancia",
+      "description": "Mantén una racha de 3 días",
+      "icon": "🔥",
+      "xp_reward": 20,
+      "category": "streak",
+      "condition": {
+        "type": "streak_days",
+        "value": 3
+      }
+    },
+    {
+      "id": "streak_7",
+      "name": "Semana Completa",
+      "description": "Mantén una racha de 7 días",
+      "icon": "🔥",
+      "xp_reward": 50,
+      "category": "streak",
+      "condition": {
+        "type": "streak_days",
+        "value": 7
+      }
+    },
+    {
+      "id": "streak_30",
+      "name": "Mes de Dedicación",
+      "description": "Mantén una racha de 30 días",
+      "icon": "🏆",
+      "xp_reward": 200,
+      "category": "streak",
+      "condition": {
+        "type": "streak_days",
+        "value": 30
+      }
+    },
+    {
+      "id": "level_5",
+      "name": "Ascendiendo",
+      "description": "Alcanza el nivel 5",
+      "icon": "📈",
+      "xp_reward": 25,
+      "category": "xp",
+      "condition": {
+        "type": "level_reached",
+        "value": 5
+      }
+    },
+    {
+      "id": "level_10",
+      "name": "Experto",
+      "description": "Alcanza el nivel 10",
+      "icon": "👑",
+      "xp_reward": 100,
+      "category": "xp",
+      "condition": {
+        "type": "level_reached",
+        "value": 10
+      }
+    },
+    {
+      "id": "xp_1000",
+      "name": "Mil Puntos",
+      "description": "Acumula 1000 XP",
+      "icon": "💎",
+      "xp_reward": 50,
+      "category": "xp",
+      "condition": {
+        "type": "total_xp",
+        "value": 1000
+      }
+    },
+    {
+      "id": "playground_explorer",
+      "name": "Explorador",
+      "description": "Usa el Playground 10 veces",
+      "icon": "🎮",
+      "xp_reward": 30,
+      "category": "playground",
+      "condition": {
+        "type": "playground_uses",
+        "value": 10
+      }
+    },
+    {
+      "id": "collector_5",
+      "name": "Coleccionista",
+      "description": "Desbloquea 5 badges",
+      "icon": "🏅",
+      "xp_reward": 40,
+      "category": "badges",
+      "condition": {
+        "type": "badges_unlocked",
+        "value": 5
+      }
+    }
+  ],
+  "daily_challenges": [
+    {
+      "id": "daily_lesson",
+      "name": "Lección del Día",
+      "description": "Completa al menos una lección hoy",
+      "icon": "📖",
+      "xp_reward": 15,
+      "type": "lesson",
+      "target": 1
+    },
+    {
+      "id": "daily_puzzle",
+      "name": "Puzzle del Día",
+      "description": "Resuelve al menos un puzzle hoy",
+      "icon": "🧩",
+      "xp_reward": 15,
+      "type": "puzzle",
+      "target": 1
+    },
+    {
+      "id": "daily_streak",
+      "name": "Mantén la Racha",
+      "description": "No pierdas tu racha hoy",
+      "icon": "🔥",
+      "xp_reward": 10,
+      "type": "activity",
+      "target": 1
+    }
+  ],
+  "weekly_challenges": [
+    {
+      "id": "weekly_lessons_5",
+      "name": "Semana de Aprendizaje",
+      "description": "Completa 5 lecciones esta semana",
+      "icon": "📚",
+      "xp_reward": 75,
+      "type": "lesson",
+      "target": 5
+    },
+    {
+      "id": "weekly_puzzles_3",
+      "name": "Puzzles Semanales",
+      "description": "Resuelve 3 puzzles esta semana",
+      "icon": "🎯",
+      "xp_reward": 60,
+      "type": "puzzle",
+      "target": 3
+    },
+    {
+      "id": "weekly_perfect",
+      "name": "Semana Perfecta",
+      "description": "Actividad todos los días de la semana",
+      "icon": "🌟",
+      "xp_reward": 100,
+      "type": "streak",
+      "target": 7
+    }
+  ]
+}

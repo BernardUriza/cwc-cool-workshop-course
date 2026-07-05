@@ -1,0 +1,40 @@
+{
+  "id": "tu-propio-contenido",
+  "title": "Mete tu propio curso",
+  "category": "getting-started",
+  "difficulty": "beginner",
+  "duration": 10,
+  "xp_reward": 50,
+  "icon": "✏️",
+  "description": "Cómo reemplazar el contenido demo con tus lecciones.",
+  "questions": [
+    "¿Qué archivos hay que crear para agregar una lección nueva?"
+  ],
+  "objectives": [
+    "Crear una lección nueva en content/lessons/",
+    "Registrarla en index.json"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "title": "Anatomía de una lección",
+      "content": "Cada lección es un JSON en `content/lessons/<id>.json` con: metadata (título, categoría, dificultad, duración, XP), `questions`, `objectives`, `sections` tipadas y `keypoints`.\n\nLos tipos de sección soportados son **text**, **tip**, **warning**, **example** y **code**."
+    },
+    {
+      "type": "example",
+      "title": "Registrar la lección",
+      "bad_example": {
+        "prompt": "Crear el archivo mi-leccion.json y ya",
+        "issue": "Sin registrarla en index.json la lección no aparece: el loader solo carga lo que el índice lista."
+      },
+      "good_example": {
+        "prompt": "Crear mi-leccion.json Y agregar \"mi-leccion\" a la lista lessons de index.json",
+        "why": "El index.json es la fuente de verdad del orden y la pertenencia a categorías."
+      }
+    }
+  ],
+  "keypoints": [
+    "Una lección = un JSON + una entrada en index.json",
+    "Las secciones tipadas cubren texto, tips, warnings, ejemplos y código"
+  ]
+}

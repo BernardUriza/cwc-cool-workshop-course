@@ -1,0 +1,77 @@
+{
+  "id": "puzzle-niveles-especificidad",
+  "title": "Niveles de Especificidad",
+  "description": "Ordena los prompts según su nivel de especificidad.",
+  "difficulty": "medium",
+  "category": "techniques",
+  "xp_reward": 45,
+  "time_limit": 360,
+  "grid_size": {
+    "rows": 4,
+    "cols": 4
+  },
+  "categories": [
+    {
+      "name": "Prompt",
+      "items": [
+        "Escribe código",
+        "Función Python",
+        "Función validar email",
+        "Validar con regex"
+      ]
+    },
+    {
+      "name": "Nivel",
+      "items": [
+        "Muy vago",
+        "Algo vago",
+        "Específico",
+        "Muy específico"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "'Escribe código' es muy vago, no especifica lenguaje ni propósito.",
+      "reveals": [
+        [
+          "Escribe código",
+          "Muy vago"
+        ]
+      ]
+    },
+    {
+      "text": "'Función Python' es algo vago, falta el propósito.",
+      "reveals": [
+        [
+          "Función Python",
+          "Algo vago"
+        ]
+      ]
+    },
+    {
+      "text": "'Función validar email' es específico en propósito.",
+      "reveals": [
+        [
+          "Función validar email",
+          "Específico"
+        ]
+      ]
+    },
+    {
+      "text": "'Validar con regex' es muy específico en método y propósito.",
+      "reveals": [
+        [
+          "Validar con regex",
+          "Muy específico"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Escribe código": "Muy vago",
+    "Función Python": "Algo vago",
+    "Función validar email": "Específico",
+    "Validar con regex": "Muy específico"
+  }
+}

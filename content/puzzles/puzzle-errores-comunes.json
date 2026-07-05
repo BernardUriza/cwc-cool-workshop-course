@@ -1,0 +1,77 @@
+{
+  "id": "puzzle-errores-comunes",
+  "title": "Errores en Prompts",
+  "description": "Identifica qué tipo de error tiene cada prompt problemático.",
+  "difficulty": "medium",
+  "category": "fundamentals",
+  "xp_reward": 50,
+  "time_limit": 420,
+  "grid_size": {
+    "rows": 4,
+    "cols": 4
+  },
+  "categories": [
+    {
+      "name": "Prompt",
+      "items": [
+        "Escribe algo",
+        "Haz todo bien",
+        "Dame info",
+        "Resuelve esto"
+      ]
+    },
+    {
+      "name": "Error",
+      "items": [
+        "Muy vago",
+        "Imposible",
+        "Sin contexto",
+        "Ambiguo"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "'Escribe algo' es demasiado vago y no especifica qué escribir.",
+      "reveals": [
+        [
+          "Escribe algo",
+          "Muy vago"
+        ]
+      ]
+    },
+    {
+      "text": "'Haz todo bien' es una instrucción imposible de cumplir perfectamente.",
+      "reveals": [
+        [
+          "Haz todo bien",
+          "Imposible"
+        ]
+      ]
+    },
+    {
+      "text": "'Dame info' no proporciona contexto sobre qué información se necesita.",
+      "reveals": [
+        [
+          "Dame info",
+          "Sin contexto"
+        ]
+      ]
+    },
+    {
+      "text": "'Resuelve esto' es ambiguo sin especificar qué resolver.",
+      "reveals": [
+        [
+          "Resuelve esto",
+          "Ambiguo"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Escribe algo": "Muy vago",
+    "Haz todo bien": "Imposible",
+    "Dame info": "Sin contexto",
+    "Resuelve esto": "Ambiguo"
+  }
+}

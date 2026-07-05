@@ -1,0 +1,77 @@
+{
+  "id": "puzzle-mejores-practicas",
+  "title": "Mejores Prácticas",
+  "description": "Identifica si cada práctica es recomendada o no.",
+  "difficulty": "medium",
+  "category": "techniques",
+  "xp_reward": 55,
+  "time_limit": 360,
+  "grid_size": {
+    "rows": 4,
+    "cols": 4
+  },
+  "categories": [
+    {
+      "name": "Práctica",
+      "items": [
+        "Ser específico",
+        "Prompts largos",
+        "Dar contexto",
+        "Usar jerga"
+      ]
+    },
+    {
+      "name": "Recomendación",
+      "items": [
+        "Siempre",
+        "Depende",
+        "Importante",
+        "Evitar"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "text": "Ser específico siempre mejora los resultados.",
+      "reveals": [
+        [
+          "Ser específico",
+          "Siempre"
+        ]
+      ]
+    },
+    {
+      "text": "Los prompts largos pueden ser buenos o malos, depende del caso.",
+      "reveals": [
+        [
+          "Prompts largos",
+          "Depende"
+        ]
+      ]
+    },
+    {
+      "text": "Dar contexto es importante para respuestas relevantes.",
+      "reveals": [
+        [
+          "Dar contexto",
+          "Importante"
+        ]
+      ]
+    },
+    {
+      "text": "Usar jerga técnica innecesaria puede confundir al modelo.",
+      "reveals": [
+        [
+          "Usar jerga",
+          "Evitar"
+        ]
+      ]
+    }
+  ],
+  "solution": {
+    "Ser específico": "Siempre",
+    "Prompts largos": "Depende",
+    "Dar contexto": "Importante",
+    "Usar jerga": "Evitar"
+  }
+}
