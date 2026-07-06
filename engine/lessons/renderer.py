@@ -274,7 +274,7 @@ class LessonRenderer:
             bad_card = html.DIV(Class="bg-red-50 rounded-lg p-4 border border-red-100")
             bad_card <= html.DIV(
                 html.SPAN("❌ ", Class="text-lg") +
-                html.SPAN("Prompt débil", Class="font-medium text-red-800"),
+                html.SPAN("Incorrecto", Class="font-medium text-red-800"),
                 Class="mb-2"
             )
             bad_card <= html.DIV(
@@ -294,7 +294,7 @@ class LessonRenderer:
             good_card = html.DIV(Class="bg-green-50 rounded-lg p-4 border border-green-100")
             good_card <= html.DIV(
                 html.SPAN("✅ ", Class="text-lg") +
-                html.SPAN("Prompt mejorado", Class="font-medium text-green-800"),
+                html.SPAN("Correcto", Class="font-medium text-green-800"),
                 Class="mb-2"
             )
             good_card <= html.DIV(
